@@ -5,7 +5,7 @@ import torch
 import torchvision
 import torch.nn.functional as F
 import numpy as np
-import opts_cricket as opts
+import opts_classroom as opts
 import time
 import h5py
 from tqdm import tqdm
