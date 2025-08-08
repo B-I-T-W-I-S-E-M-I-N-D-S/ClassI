@@ -40,7 +40,7 @@ def box_include(y, target): #is target is the larger box than y?
                        
         
 class VideoDataSet(data.Dataset):
-    def __init__(self,opt,subset="train"):
+    def __init__(self,opt,subset="train", video_name="none"):
         self.subset = subset
         self.mode = opt["mode"]
         self.predefined_fps = opt["predefined_fps"]
@@ -61,6 +61,7 @@ class VideoDataSet(data.Dataset):
         self.data_rescale=opt["data_rescale"]
         self.anchors=opt["anchors"]
         self.pos_threshold=opt["pos_threshold"]
+        self.video_name = video_name
         
         self._getDatasetDict()  
         self._loadFeaturelen(opt)                  
